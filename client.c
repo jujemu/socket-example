@@ -35,6 +35,9 @@ int main(void)
     }
     printf("Connecting with %s %d...\n", HOST, PORT);
 
+    send(sockfd, "Hello from client", strlen("Hello from client"), 0);
+    printf("Send to server: %s\n", "Hello from client");
+
     close(sockfd);
     return 0;
 }
